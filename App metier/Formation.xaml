@@ -8,6 +8,21 @@
              d:DesignHeight="450" d:DesignWidth="800"
              Background="AntiqueWhite">
     <Grid>
-            
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Formation" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.ColumnSpan="2" FontSize="20"/>
+        <StackPanel HorizontalAlignment="Center" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" >
+
+            <CheckBox Content="Formation bac +2 puis promotion a l'ancienneté dans l'entreprise" IsChecked="True"/>
+            <CheckBox Content="Bac +5" IsChecked="True"/>
+            <CheckBox Content="Sortie d'ecole d'ingénieur" IsChecked="True"/>
+        </StackPanel>
+        <Image HorizontalAlignment="Center" Height="197" Grid.Row="1" VerticalAlignment="Center" Width="270" Source="/Diplomes.png" />
     </Grid>
 </UserControl>

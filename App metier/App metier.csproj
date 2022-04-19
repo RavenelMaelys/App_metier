@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Diplomes.png" />
     <None Remove="Res\add.png" />
     <None Remove="Res\down.png" />
     <None Remove="Res\easy.jpg" />
@@ -41,6 +42,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Diplomes.png" />
     <Resource Include="Res\add.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -119,6 +121,10 @@
     <Resource Include="Res\up.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Pictures\" />
   </ItemGroup>
 
 </Project>
