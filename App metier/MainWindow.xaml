@@ -3,24 +3,115 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:App_metier"
+        xmlns:local="clr-namespace:App_metier" xmlns:themes="clr-namespace:WPFUI.Themes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="5*"/>
-        </Grid.ColumnDefinitions>
-        <DockPanel Background="#FCA311" Grid.Column="0" Grid.Row="0">
-            <StackPanel>
-                <Button x:Name="Missions_btn" Content="Missions" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Missions_btn_Click"/>
-                <Button x:Name="Sect_btn" Content="Secteur d'activité" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <Button x:Name="Formation_btn" Content="Formation" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <Button x:Name="Evol_btn" Content="Evolution" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <Button x:Name="Profil_btn" Content="Profil" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Profil_btn_Click"/>
-                
-            </StackPanel>
-        </DockPanel>
+        Title="MainWindow" Height="450" Width="800" Background="Transparent" WindowStyle="None">
+    <Border Background="Transparent" CornerRadius="20" BorderThickness="2">
 
-    </Grid>
+        <Border.Effect>
+            <DropShadowEffect 
+                    BlurRadius="8"
+                    ShadowDepth="1"  
+                    Direction="-45"
+                    Color="Black"
+                    RenderingBias="Quality"
+                 />
+        </Border.Effect>
+
+        <Grid Background="{StaticResource AyoDarkGray}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <!--panelHeader-->
+            <themes:RoundedControl x:Name="Header"
+                IsClickalble="True"
+                ColorBackDisable="{StaticResource AyoDarkGrayC}"                     
+                ColorBackOver="{x:Null}"
+                ColorBackDown="{x:Null}"
+                ColorBackActiv="{x:Null}"
+                IsAllowOver="False"
+                OnDown="Header_OnDown"
+                BorderSize="0"
+                CornerRadius="15" 
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                RoundedType="Top"
+                SizeText="30"
+                Text="App Metier"
+                IsActiv="True"
+                />
+
+            <themes:RoundedControl 
+                x:Name="Missions_btn"
+                Grid.Row="1" 
+                Text="Missions"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                OnClick="Missions_btn_Click"
+                Width="160"
+                Height="30"
+                BorderSize="2"
+                CornerRadius="6"
+                RoundedType="Custom"
+                RoundedFlag="DownLeft"
+                />
+
+            <themes:RoundedControl
+                x:Name="Sect_btn"
+                Grid.Row="1"
+                Text="Secteur d'activité"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="160"
+                Height="30"
+                BorderSize="2" 
+                CornerRadius="6"
+                Margin="158,0,0,0"
+                RoundedType="None"/>
+
+            <themes:RoundedControl
+                x:Name="Formation_btn"
+                Grid.Row="1"
+                Text="Formation"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top" 
+                Width="160"
+                Height="30" 
+                BorderSize="2"
+                CornerRadius="6"
+                RoundedType="Custom"/>
+
+            <themes:RoundedControl
+                x:Name="Evol_btn"
+                Text="Evolution" 
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top" 
+                Width="160"
+                Height="30"
+                BorderSize="2" 
+                CornerRadius="6" 
+                Margin="477,0,0,0"
+                Grid.Row="1"
+                RoundedType="None"/>
+
+            <themes:RoundedControl
+                x:Name="Profil_btn"
+                Text="Profil"
+                HorizontalAlignment="Left"
+                OnClick="Profil_btn_Click"
+                Width="160" Height="30"
+                BorderSize="2"
+                CornerRadius="6"
+                Margin="636,0,0,356"
+                RoundedType="Custom"
+                RoundedFlag="DownRight"
+                Grid.Row="1"/>
+
+        </Grid>
+    </Border>
 </Window>
