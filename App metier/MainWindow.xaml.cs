@@ -44,28 +44,47 @@ namespace App_metier
         {
          //   int widthBtn;
         }
-
-
-
-
-        #region event from UI
-        private void btnQuit_OnClick(object sender, EventArgs e)
+        private void Missions_btn_Click(object sender, RoutedEventArgs e)
         {
-            Environment.Exit(Environment.ExitCode);
-            Application.Current.Shutdown();
+            //var Missions = new Missions();
+            //this.MainContent.Content = Missions;
         }
 
-        private void btnMax_OnClick(object sender, EventArgs e) =>
-            WindowState = (WindowState == WindowState.Normal) ? WindowState.Maximized : WindowState.Normal;
-
-        private void btnMin_OnClick(object sender, EventArgs e) => WindowState = WindowState.Minimized;
-
-        private void Header_OnDown(object sender, MouseEventArgs e)
+        private void Profil_btn_Click(object sender, RoutedEventArgs e)
         {
-            this.DragMove();
+            //var Profile = new Profile();
+            //this.MainContent.Content = Profile;
+            
+
+
+            /*Maitrise de logiciels (Environnement de developement)
+             * Maitrise des languages (C#, C++, java, Python)
+             *Maitrise de l'anglais
+             *Communication skills
+             *Managment skills
+             */
         }
 
-        #endregion
+
+
+
+        private void Carri_btn_Click(object sender, RoutedEventArgs e)
+        {
+            //var Carriere = new Carrière();
+            //this.MainContent.Content = Carriere;
+
+
+            /*Salaire : 30k-35 k = junior, 40k = millieu, Sr= 49k
+             * Evolution possible
+             */
+        }
+
+        private void Sect_btn_Click(object sender, RoutedEventArgs e)
+        {
+            //var Secteurs = new Secteurs();
+            //this.MainContent.Content = Secteurs;
+        }
+
 
         private void btn_OnClick(object sender, EventArgs e)
         {
@@ -78,6 +97,23 @@ namespace App_metier
             {
                 rctrl.IsActiv = rctrl.Name == control.Name;
             }
+        }
+
+
+        private void btnQuit_OnClick(object sender, EventArgs e)
+        {
+            Environment.Exit(Environment.ExitCode);
+            Application.Current.Shutdown();
+        }
+
+        private void btnMax_OnClick(object sender, EventArgs e) =>   WindowState = (WindowState == WindowState.Normal) ? WindowState.Maximized : WindowState.Normal;
+
+        private void btnMin_OnClick(object sender, EventArgs e) => WindowState = WindowState.Minimized;
+
+
+        private void Header_OnDown(object sender, MouseEventArgs e)
+        {
+            this.DragMove();
         }
     }
 }
