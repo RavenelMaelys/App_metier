@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:App_metier"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -14,13 +15,12 @@
         <DockPanel Background="#FCA311" Grid.Column="0" Grid.Row="0">
             <StackPanel>
                 <Button x:Name="Missions_btn" Content="Missions" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Missions_btn_Click"/>
-                <Button x:Name="Sect_btn" Content="Secteur d'activité" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Button x:Name="Sect_btn" Content="Secteur d'activité" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Sect_btn_Click"/>
                 <Button x:Name="Formation_btn" Content="Formation" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <Button x:Name="Evol_btn" Content="Evolution" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Button x:Name="Carri_btn" Content="Carrière" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Carri_btn_Click"/>
                 <Button x:Name="Profil_btn" Content="Profil" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Profil_btn_Click"/>
-                
             </StackPanel>
         </DockPanel>
-
+        <ContentControl x:Name="MainContent" Grid.Column="1" Grid.Row="0"/>
     </Grid>
 </Window>

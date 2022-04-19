@@ -41,9 +41,28 @@ namespace App_metier
         private void Profil_btn_Click(object sender, RoutedEventArgs e)
         {
             /*Maitrise de logiciels (Environnement de developement)
+             * Maitrise des languages (C#, C++, java, Python)
+             *Maitrise de l'anglais
+             *Communication skills
+             *Managment skills
+             */
+        }
+
+        private void Carri_btn_Click(object sender, RoutedEventArgs e)
+        {
+            /*Salaire : 30k-35 k = junior, 40k = millieu, Sr= 49k
+             * Evolution possible
+             */
+        }
+
+        private void Sect_btn_Click(object sender, RoutedEventArgs e)
+        {
+            var Secteurs = new Secteurs();
+            this.MainContent.Content = Secteurs;
+            /*
              * 
-             *
-             *
+             * 
+             * 
              */
         }
     }
