@@ -1,0 +1,26 @@
+﻿<Window x:Class="App_metier.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:App_metier"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <DockPanel Background="#FCA311" Grid.Column="0" Grid.Row="0">
+            <StackPanel>
+                <Button x:Name="Missions_btn" Content="Missions" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Missions_btn_Click"/>
+                <Button x:Name="Sect_btn" Content="Secteur d'activité" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Button x:Name="Formation_btn" Content="Formation" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Button x:Name="Evol_btn" Content="Evolution" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Button x:Name="Profil_btn" Content="Profil" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Profil_btn_Click"/>
+                
+            </StackPanel>
+        </DockPanel>
+
+    </Grid>
+</Window>
