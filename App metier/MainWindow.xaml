@@ -58,7 +58,7 @@
                 BorderSize="2"
                 CornerRadius="6"
                 RoundedType="Custom"
-                RoundedFlag="DownLeft"
+                RoundedFlag="DownLeft" Loaded="Missions_btn_Loaded"
                 />
 
             <themes:RoundedControl
@@ -71,7 +71,7 @@
                 BorderSize="2" 
                 CornerRadius="6"
                 Margin="158,0,0,0"
-                RoundedType="None" HorizontalAlignment="Left" Width="160"/>
+                RoundedType="None" HorizontalAlignment="Left" Width="160" Loaded="Sect_btn_Loaded"/>
 
             <themes:RoundedControl
                 x:Name="Formation_btn"
@@ -80,7 +80,7 @@
                 SizeText="20"
                 BorderSize="2"
                 CornerRadius="6"
-                RoundedType="Custom" Margin="318,0,318,356"/>
+                RoundedType="Custom" Margin="318,0,318,356" Loaded="Formation_btn_Loaded"/>
 
             <themes:RoundedControl
                 x:Name="Evol_btn"
@@ -92,7 +92,7 @@
                 CornerRadius="6" 
                 Margin="0,0,159,0"
                 Grid.Row="1"
-                RoundedType="None" HorizontalAlignment="Right" Width="160"
+                RoundedType="None" HorizontalAlignment="Right" Width="160" Loaded="Evol_btn_Loaded"
                 />
 
             <themes:RoundedControl
@@ -106,7 +106,7 @@
                 Margin="0,0,0,356"
                 RoundedType="Custom"
                 RoundedFlag="DownRight"
-                Grid.Row="1"/>
+                Grid.Row="1" Loaded="Profil_btn_Loaded"/>
 
 
             <themes:RoundedControl x:Name="btnQuit"
@@ -147,5 +147,6 @@
                 />
 
         </Grid>
+        <!--<ContentControl x:Name="MainContent" Grid.Column="1" Grid.Row="0"/>-->
     </Border>
 </Window>

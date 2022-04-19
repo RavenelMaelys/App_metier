@@ -46,5 +46,32 @@ namespace App_metier
         }
 
         #endregion
+
+        private void Missions_btn_Loaded(object sender, RoutedEventArgs e)
+        {
+            var Mission = new Missions();
+            this.MainContent.Content = Mission;
+        }
+
+        private void Sect_btn_Loaded(object sender, RoutedEventArgs e)
+        {
+            var Secteur = new Secteurs();
+            this.MainContent.Content = Secteur;
+        }
+
+        private void Formation_btn_Loaded(object sender, RoutedEventArgs e)
+        {
+            var Format = new 
+        }
+
+        private void Evol_btn_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Profil_btn_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
