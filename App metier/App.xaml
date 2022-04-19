@@ -55,6 +55,9 @@
         <ImageSource x:Key="ImgUnlock">/Res/unlock.png</ImageSource>
         <ImageSource x:Key="ImgSetting">/Res/setting.png</ImageSource>
         <ImageSource x:Key="ImgRefresh">/Res/refresh.png</ImageSource>
+        <ImageSource x:Key="ImgSector">/Res/sector.png</ImageSource>
+        <ImageSource x:Key="ImgCarrier">/Res/Carrière.png</ImageSource>
+        <ImageSource x:Key="ImgGraph">/Res/GraphSalaire.png</ImageSource>
 
     </Application.Resources>
 </Application>

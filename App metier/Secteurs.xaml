@@ -3,11 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:App_metier"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800"
-             Background="Red">
+             xmlns:local="clr-namespace:App_metier" xmlns:themes="clr-namespace:WPFUI.Themes"
+             mc:Ignorable="d" d:DesignWidth="800"
+             Background="{StaticResource AyoDarkGray}" Height="390">
     <Grid>
-            
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+
+
+        <themes:RoundedControl Text="Secteurs" BorderSize="5" SizeText="30" Margin="220,8,220,7"/>
+        <Image Margin="10,10,15,17" Grid.Row="1" Grid.ColumnSpan="2" Source="{StaticResource ImgSector}"/>
+
     </Grid>
 </UserControl>

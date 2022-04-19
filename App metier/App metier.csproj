@@ -9,7 +9,9 @@
 
   <ItemGroup>
     <None Remove="Diplomes.png" />
+    <None Remove="GraphSalaire.png" />
     <None Remove="Res\add.png" />
+    <None Remove="Res\Carrière.png" />
     <None Remove="Res\down.png" />
     <None Remove="Res\easy.jpg" />
     <None Remove="Res\easy.png" />
@@ -30,6 +32,7 @@
     <None Remove="Res\run.png" />
     <None Remove="Res\runAll.png" />
     <None Remove="Res\save.png" />
+    <None Remove="Res\sector.png" />
     <None Remove="Res\setting.png" />
     <None Remove="Res\shut.png" />
     <None Remove="Res\stop.png" />
@@ -43,7 +46,13 @@
 
   <ItemGroup>
     <Resource Include="Diplomes.png" />
+    <Resource Include="Res\GraphSalaire.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Res\add.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\Carrière.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Res\down.png">
@@ -104,6 +113,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Res\save.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\sector.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Res\setting.png">

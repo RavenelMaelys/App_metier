@@ -19,7 +19,7 @@
                  />
         </Border.Effect>
 
-        <Grid Background="{StaticResource AyoDarkGray}">
+        <Grid Background="{StaticResource AyoDarkGray}" Margin="-2,0,0,-48">
             <Grid.RowDefinitions>
                 <RowDefinition Height="60" x:Uid="0"/>
                 <RowDefinition Height="30" x:Uid="1"/>
@@ -190,6 +190,10 @@
                 ZoomImage="0.8" VerticalAlignment="Center" HorizontalAlignment="Right" Width="50"
                 />
             <local:Missions x:Name="mission" HorizontalAlignment="Center" Height="336" Grid.Row="2" VerticalAlignment="Bottom" Width="776" Visibility="Hidden" Margin="0,0,0,10"/>
+            <local:Secteurs x:Name="sector" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Height="336" Width="776" Margin="0,10,0,0" Visibility="Hidden"/>
+            <local:Carrière x:Name="cariere" Margin="22,0,12,8" Grid.Row="2" Visibility="Hidden"/>
+            <local:Profile x:Name="profil"  HorizontalAlignment="Right" Grid.Row="2" Width="776" Visibility="Hidden" Margin="0,10,11,10"/>
+            <local:Formation x:Name="formation" Margin="11,10,11,10" Grid.Row="2" Visibility="Hidden"/>
 
             <!--<local:Carrière HorizontalAlignment="Stretch" Grid.Row="2" VerticalAlignment="Stretch" Visibility="{Binding Visibility, ElementName=Evol_btn, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Width="796"/>-->
             <!--<local:Profile HorizontalAlignment="Stretch" Grid.Row="2" VerticalAlignment="Stretch" Visibility="{Binding IsActiv, ElementName=Profil_btn, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Width="796"/>-->

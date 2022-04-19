@@ -3,27 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:App_metier"
+             xmlns:local="clr-namespace:App_metier" xmlns:themes="clr-namespace:WPFUI.Themes"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
-             Background="LightGray">
+             Background="{StaticResource AyoDarkGray}">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
-        <Label Content="Carrière :" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="20"/>
-        <Image HorizontalAlignment="Center"  Height="303" VerticalAlignment="Center" Width="297" Source="/Pictures/GraphSalaire.png" Grid.Column="1" Grid.Row="1"/>
-        <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="0">
-            <Label Content="Evolutions possible: "/>
-            <CheckBox Content="Cadre"/>
-            <CheckBox Content="Chef de projet"/>
-            <CheckBox Content="Expert technique"/>
+        <Image Margin="64,307,477,25" Source="{StaticResource ImgCarrier}"/>
+        <themes:RoundedControl Text="Carrière" BorderSize="5" SizeText="30" Margin="220,22,220,0" Height="64" VerticalAlignment="Top"/>
+        <StackPanel Orientation="Vertical" Grid.Column="0" Margin="10,117,477,179">
+            <Label Content="Evolutions possible: " Foreground="{StaticResource AyoYellowLinearGradint}" FontSize="25"/>
+            <RadioButton Content="Cadre" Foreground="{StaticResource AyoYellowLinearGradint}" FontSize="20" />
+            <RadioButton Content="Chef de projet" Foreground="{StaticResource AyoYellowLinearGradint}" FontSize="20"/>
+            <RadioButton Content="Expert technique" Foreground="{StaticResource AyoYellowLinearGradint}" FontSize="20"/>
         </StackPanel>
-
+        <Image Margin="330,117,44,25" Source="{StaticResource ImgGraph}"/>
     </Grid>
 </UserControl>

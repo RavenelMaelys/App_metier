@@ -3,26 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:App_metier"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800"
-             Background="AntiqueWhite">
-    <Grid>
+             xmlns:local="clr-namespace:App_metier" xmlns:themes="clr-namespace:WPFUI.Themes"
+             mc:Ignorable="d" d:DesignWidth="800"
+             Background="{StaticResource AyoDarkGray}" Height="339">
+    <Grid Height="339" VerticalAlignment="Center">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
             <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
-        <Label Content="Formation" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.ColumnSpan="2" FontSize="20"/>
-        <StackPanel HorizontalAlignment="Center" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" >
+        <StackPanel Margin="381,154,19,77" >
 
-            <CheckBox Content="Formation bac +2 puis promotion a l'ancienneté dans l'entreprise" IsChecked="True"/>
-            <CheckBox Content="Bac +5" IsChecked="True"/>
-            <CheckBox Content="Sortie d'ecole d'ingénieur" IsChecked="True"/>
+            <CheckBox IsChecked="True">
+                <TextBlock Text="Formation bac +2 puis promotion a l'ancienneté dans l'entreprise"  Foreground="{StaticResource AyoYellowLinearGradint}" FontSize="15" Height="43" TextWrapping="Wrap" />
+            </CheckBox>
+            <CheckBox Content="Bac +5" IsChecked="True" Foreground="{StaticResource AyoYellowLinearGradint}" FontSize="15"/>
+            <CheckBox Content="Sortie d'ecole d'ingénieur" IsChecked="True" Foreground="{StaticResource AyoYellowLinearGradint}" FontSize="15"/>
         </StackPanel>
-        <Image HorizontalAlignment="Center" Height="197" Grid.Row="1" VerticalAlignment="Center" Width="270" Source="/Diplomes.png" />
+        <Image Source="/Diplomes.png" Margin="13,96,516,33" />
+        <themes:RoundedControl Text="Formation" BorderSize="5" SizeText="30" Margin="220,12,220,0" Height="37" VerticalAlignment="Top"/>
     </Grid>
 </UserControl>

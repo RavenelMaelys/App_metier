@@ -32,10 +32,10 @@ namespace App_metier
             InitializeComponent();
 
             _btn.Add(new ControlBinding(Missions_btn, mission));
-            _btn.Add(new ControlBinding(Sect_btn, null));
-            _btn.Add(new ControlBinding(Formation_btn, null));
-            _btn.Add(new ControlBinding(Evol_btn, null));
-            _btn.Add(new ControlBinding(Profil_btn, null));
+            _btn.Add(new ControlBinding(Sect_btn, sector));
+            _btn.Add(new ControlBinding(Formation_btn, formation));
+            _btn.Add(new ControlBinding(Evol_btn, cariere));
+            _btn.Add(new ControlBinding(Profil_btn, profil));
 
             this.SizeChanged += MainWindow_SizeChanged;
         }
