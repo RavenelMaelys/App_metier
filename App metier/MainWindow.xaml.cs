@@ -27,19 +27,14 @@ namespace App_metier
 
         private void Missions_btn_Click(object sender, RoutedEventArgs e)
         {
-            /*Apréhender les projets
-             * Concevoir un plan de developpement
-             * le besoin du client
-             * Developpement
-             * Suivi du developememnt
-             * *evolution du besoin
-             * *gerer le developement (temps, imprévus)
-             * restitution du logiciel
-             * Support logiciel*/
+            var Missions = new Missions();
+            this.MainContent.Content = Missions;
         }
 
         private void Profil_btn_Click(object sender, RoutedEventArgs e)
         {
+            var Profile = new Profile();
+            this.MainContent.Content = Profile;
             /*Maitrise de logiciels (Environnement de developement)
              * Maitrise des languages (C#, C++, java, Python)
              *Maitrise de l'anglais
@@ -50,6 +45,8 @@ namespace App_metier
 
         private void Carri_btn_Click(object sender, RoutedEventArgs e)
         {
+            var Carriere = new Carrière();
+            this.MainContent.Content = Carriere;
             /*Salaire : 30k-35 k = junior, 40k = millieu, Sr= 49k
              * Evolution possible
              */
