@@ -97,9 +97,9 @@
                 Height="30"
                 Width="160"
                 RoundedType="Custom" 
-                Margin="317,0,320,0"
+                Margin="317,0,0,0"
                 OnClick="btn_OnClick"
-                ActivAccentuation="2"
+                ActivAccentuation="2" HorizontalAlignment="Left"
                 />
 
             <themes:RoundedControl
@@ -110,23 +110,23 @@
                 Height="30"
                 BorderSize="2" 
                 CornerRadius="6" 
-                Margin="0,0,160,0"
+                Margin="476,0,0,0"
                 Grid.Row="1"
                 RoundedType="None"
                 IsClickalble="True"
-                OnClick="btn_OnClick" HorizontalAlignment="Right" Width="160"
-                ActivAccentuation="2"
+                OnClick="btn_OnClick"
+                ActivAccentuation="2" HorizontalAlignment="Left" Width="160"
                 />
 
             <themes:RoundedControl
                 x:Name="Profil_btn"
                 Text="Profil"
                 SizeText="20"
-                HorizontalAlignment="Right"
+                HorizontalAlignment="Left"
                 Width="160" Height="30"
                 BorderSize="2"
                 CornerRadius="6"
-                Margin="0,0,0,0"
+                Margin="636,0,0,0"
                 RoundedType="Custom"
                 RoundedFlag="DownRight"
                 Grid.Row="1"
@@ -173,7 +173,7 @@
                 ZoomImage="0.8" VerticalAlignment="Center" HorizontalAlignment="Right" Width="50"
                 />
             <themes:RoundedControl x:Name="btnMax"
-                OnClick="btnMin_OnClick"
+                OnClick="btnMax_OnClick"
                 ColorBorderActiv="{x:Null}"
                 ColorBackActiv="{x:Null}"
                 ColorBackOver="{StaticResource AyoGrayC}"
@@ -189,11 +189,11 @@
                 Text=""
                 ZoomImage="0.8" VerticalAlignment="Center" HorizontalAlignment="Right" Width="50"
                 />
-            
-            <local:Carrière HorizontalAlignment="Stretch" Grid.Row="2" VerticalAlignment="Stretch" Visibility="{Binding Visibility, ElementName=Evol_btn, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Width="796"/>
-            <!--<local:Missions HorizontalAlignment="Stretch" Grid.Row="2" VerticalAlignment="Stretch" Visibility="{Binding IsActiv, ElementName=Missions_btn, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Width="796"/>-->
-            <local:Profile HorizontalAlignment="Stretch" Grid.Row="2" VerticalAlignment="Stretch" Visibility="{Binding IsActiv, ElementName=Profil_btn, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Width="796"/>
-            <local:Secteurs Grid.Row="2" Visibility="{Binding IsActiv, ElementName=Sect_btn, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Margin="10,10,10,10"/>
+            <local:Missions x:Name="mission" HorizontalAlignment="Center" Height="336" Grid.Row="2" VerticalAlignment="Bottom" Width="776" Visibility="Hidden" Margin="0,0,0,10"/>
+
+            <!--<local:Carrière HorizontalAlignment="Stretch" Grid.Row="2" VerticalAlignment="Stretch" Visibility="{Binding Visibility, ElementName=Evol_btn, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Width="796"/>-->
+            <!--<local:Profile HorizontalAlignment="Stretch" Grid.Row="2" VerticalAlignment="Stretch" Visibility="{Binding IsActiv, ElementName=Profil_btn, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Width="796"/>-->
+            <!--<local:Secteurs Grid.Row="2" Visibility="{Binding IsActiv, ElementName=Sect_btn, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Margin="10,10,10,10"/>-->
 
         </Grid>
     </Border>

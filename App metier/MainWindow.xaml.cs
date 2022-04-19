@@ -23,7 +23,7 @@ namespace App_metier
     public partial class MainWindow : Window
     {
 
-        List<RoundedControl> _btn = new List<RoundedControl>();
+        List<ControlBinding> _btn = new List<ControlBinding>();
 
 
         public MainWindow()
@@ -31,59 +31,33 @@ namespace App_metier
             DataContext = this;
             InitializeComponent();
 
-            _btn.Add(Missions_btn);
-            _btn.Add(Sect_btn);
-            _btn.Add(Formation_btn);
-            _btn.Add(Evol_btn);
-            _btn.Add(Profil_btn);
-
+            _btn.Add(new ControlBinding(Missions_btn, mission));
+            _btn.Add(new ControlBinding(Sect_btn, null));
+            _btn.Add(new ControlBinding(Formation_btn, null));
+            _btn.Add(new ControlBinding(Evol_btn, null));
+            _btn.Add(new ControlBinding(Profil_btn, null));
 
             this.SizeChanged += MainWindow_SizeChanged;
         }
 
         private void MainWindow_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-         //   int widthBtn;
-        }
-        private void Missions_btn_Click(object sender, RoutedEventArgs e)
-        {
-            //var Missions = new Missions();
-            //this.MainContent.Content = Missions;
-        }
-
-        private void Profil_btn_Click(object sender, RoutedEventArgs e)
-        {
-            //var Profile = new Profile();
-            //this.MainContent.Content = Profile;
-            
-
-
-            /*Maitrise de logiciels (Environnement de developement)
-             * Maitrise des languages (C#, C++, java, Python)
-             *Maitrise de l'anglais
-             *Communication skills
-             *Managment skills
-             */
-        }
-
-
-
-
-        private void Carri_btn_Click(object sender, RoutedEventArgs e)
-        {
-            //var Carriere = new Carrière();
-            //this.MainContent.Content = Carriere;
-
-
-            /*Salaire : 30k-35 k = junior, 40k = millieu, Sr= 49k
-             * Evolution possible
-             */
-        }
-
-        private void Sect_btn_Click(object sender, RoutedEventArgs e)
-        {
-            //var Secteurs = new Secteurs();
-            //this.MainContent.Content = Secteurs;
+            double widthBtn = this.Width / 5;
+            for (int i = 0; i < _btn.Count; i++)
+            {
+                _btn[i].RoundedBtn.Width = widthBtn;
+                if(i!=0)
+                {
+                    Thickness thicknessLast = _btn[i - 1].RoundedBtn.Margin;
+                    Thickness thicknessCurrent = _btn[i].RoundedBtn.Margin;
+                    _btn[i].RoundedBtn.Margin = new Thickness(thicknessLast.Left+widthBtn, thicknessCurrent.Top, thicknessCurrent.Right, thicknessCurrent.Bottom);
+                }
+                else
+                {
+                    Thickness thicknessCurrent = _btn[i].RoundedBtn.Margin;
+                    _btn[i].RoundedBtn.Margin = new Thickness(0, thicknessCurrent.Top, thicknessCurrent.Right, thicknessCurrent.Bottom);
+                }
+            }
         }
 
 
@@ -94,9 +68,9 @@ namespace App_metier
 
             RoundedControl control = (RoundedControl)sender;
 
-            foreach (RoundedControl rctrl in _btn)
+            foreach (ControlBinding rctrl in _btn)
             {
-                rctrl.IsActiv = rctrl.Name == control.Name;
+                rctrl.IsActiv = rctrl.RoundedBtn.Name == control.Name;
             }
         }
 
@@ -121,31 +95,36 @@ namespace App_metier
 
         #endregion
 
-        private void Missions_btn_Loaded(object sender, RoutedEventArgs e)
-        {
-            var Mission = new Missions();
-            this.MainContent.Content = Mission;
+
+    }
+
+
+    class ControlBinding
+    {
+        private RoundedControl btn;
+        private Control control;
+
+
+
+
+        public bool IsActiv { get => btn.IsActiv;
+            set
+            {
+                btn.IsActiv = value;
+                if (control == null)
+                    return;
+                control.Visibility = (value)?Visibility.Visible : Visibility.Hidden;
+            }
         }
 
-        private void Sect_btn_Loaded(object sender, RoutedEventArgs e)
+
+        public RoundedControl RoundedBtn => btn;
+
+
+        public ControlBinding(RoundedControl btn, Control control)
         {
-            var Secteur = new Secteurs();
-            this.MainContent.Content = Secteur;
-        }
-
-        private void Formation_btn_Loaded(object sender, RoutedEventArgs e)
-        {
-            var Format = new 
-        }
-
-        private void Evol_btn_Loaded(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Profil_btn_Loaded(object sender, RoutedEventArgs e)
-        {
-
+            this.btn = btn;
+            this.control = control;
         }
     }
 }

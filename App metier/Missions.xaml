@@ -5,13 +5,11 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:App_metier"
              xmlns:Themes="clr-namespace:WPFUI.Themes" x:Class="App_metier.Missions"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800" Background="{StaticResource AyoDarkGray}">
+             mc:Ignorable="d" Background="{StaticResource AyoDarkGray}" Height="266" Width="561">
     <Grid >
-        <Label Content ="Apréhender les projets"/>
-        <Label Content = "le besoin du client"/>
-        <Label Content="Suivi du developememnt"/>
-        <Label Content="evolution du besoin"/>
-        <Themes:RoundedControl Margin="144,120,452,272" Text="bonjour" BorderSize="4" CornerRadius="15" RoundedType="All" IsClickalble="false"/>
+        <Themes:RoundedControl Margin="10,10,10,0" Text="Apréhender les projets" BorderSize="4" CornerRadius="15" RoundedType="All" IsClickalble="false" SizeText="20" Height="58" VerticalAlignment="Top"/>
+        <Themes:RoundedControl Margin="10,73,10,0" Text="le besoin du client" BorderSize="4" CornerRadius="15" RoundedType="All" IsClickalble="false" SizeText="20" Height="58" VerticalAlignment="Top"/>
+        <Themes:RoundedControl Margin="10,199,10,0" Text="Suivi du developememnt" BorderSize="4" CornerRadius="15" RoundedType="All" IsClickalble="false" SizeText="20" Height="58" VerticalAlignment="Top"/>
+        <Themes:RoundedControl Margin="10,136,10,0" Text="evolution du besoin" BorderSize="4" CornerRadius="15" RoundedType="All" IsClickalble="false" SizeText="20" Height="58" VerticalAlignment="Top"/>
     </Grid>
 </UserControl>
