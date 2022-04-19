@@ -6,8 +6,24 @@
              xmlns:local="clr-namespace:App_metier"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
-             Background="AntiqueWhite">
+             Background="LightGray">
     <Grid>
-            
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Carrière :" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="20"/>
+        <Image HorizontalAlignment="Center"  Height="303" VerticalAlignment="Center" Width="297" Source="/Pictures/GraphSalaire.png" Grid.Column="1" Grid.Row="1"/>
+        <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="0">
+            <Label Content="Evolutions possible: "/>
+            <CheckBox Content="Cadre"/>
+            <CheckBox Content="Chef de projet"/>
+            <CheckBox Content="Expert technique"/>
+        </StackPanel>
+
     </Grid>
 </UserControl>

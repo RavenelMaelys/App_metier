@@ -49,8 +49,7 @@ namespace App_metier
 
         private void Missions_btn_Loaded(object sender, RoutedEventArgs e)
         {
-            var Mission = new Missions();
-            this.MainContent.Content = Mission;
+            
         }
 
         private void Sect_btn_Loaded(object sender, RoutedEventArgs e)
