@@ -30,5 +30,31 @@
             <GradientStop Color="{Binding AyoLightGrayC}"/>
         </LinearGradientBrush>
         <FontFamily x:Key="AyoFont">Segoe UI</FontFamily>
+
+
+        <ImageSource x:Key="ImgShut">/Res/shut.png</ImageSource>
+        <ImageSource x:Key="ImgMin">/Res/min.png</ImageSource>
+        <ImageSource x:Key="ImgMax">/Res/max.png</ImageSource>
+        <ImageSource x:Key="ImgAdd">/Res/add.png</ImageSource>
+        <ImageSource x:Key="ImgRemove">/Res/minus.png</ImageSource>
+        <ImageSource x:Key="ImgEdit">/Res/edit.png</ImageSource>
+        <ImageSource x:Key="ImgPlay">/Res/play.png</ImageSource>
+        <ImageSource x:Key="ImgStop">/Res/stop.png</ImageSource>
+        <ImageSource x:Key="ImgPause">/Res/pause.png</ImageSource>
+        <ImageSource x:Key="ImgRun">/Res/run.png</ImageSource>
+        <ImageSource x:Key="ImgEasySave">/Res/EasySave.png</ImageSource>
+        <ImageSource x:Key="ImgEasySave2">/Res/EasySave2.png</ImageSource>
+        <ImageSource x:Key="ImgEasy">/Res/easy.png</ImageSource>
+        <ImageSource x:Key="ImgSave">/Res/save.png</ImageSource>
+        <ImageSource x:Key="ImgRunAll">/Res/runAll.png</ImageSource>
+        <ImageSource x:Key="ImgOpen">/Res/open.png</ImageSource>
+        <ImageSource x:Key="ImgDown">/Res/down.png</ImageSource>
+        <ImageSource x:Key="ImgUp">/Res/up.png</ImageSource>
+        <ImageSource x:Key="ImgOk">/Res/ok.png</ImageSource>
+        <ImageSource x:Key="ImgLock">/Res/lock.png</ImageSource>
+        <ImageSource x:Key="ImgUnlock">/Res/unlock.png</ImageSource>
+        <ImageSource x:Key="ImgSetting">/Res/setting.png</ImageSource>
+        <ImageSource x:Key="ImgRefresh">/Res/refresh.png</ImageSource>
+
     </Application.Resources>
 </Application>

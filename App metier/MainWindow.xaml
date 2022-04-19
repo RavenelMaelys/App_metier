@@ -48,11 +48,11 @@
 
             <themes:RoundedControl 
                 x:Name="Missions_btn"
+                SizeText="20"
                 Grid.Row="1" 
                 Text="Missions"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
-                OnClick="Missions_btn_Click"
                 Width="160"
                 Height="30"
                 BorderSize="2"
@@ -63,54 +63,88 @@
 
             <themes:RoundedControl
                 x:Name="Sect_btn"
+                SizeText="20"
                 Grid.Row="1"
                 Text="Secteur d'activité"
-                HorizontalAlignment="Left"
                 VerticalAlignment="Top"
-                Width="160"
                 Height="30"
                 BorderSize="2" 
                 CornerRadius="6"
                 Margin="158,0,0,0"
-                RoundedType="None"/>
+                RoundedType="None" HorizontalAlignment="Left" Width="160"/>
 
             <themes:RoundedControl
                 x:Name="Formation_btn"
                 Grid.Row="1"
-                Text="Formation"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Top" 
-                Width="160"
-                Height="30" 
+                Text="Formation" 
+                SizeText="20"
                 BorderSize="2"
                 CornerRadius="6"
-                RoundedType="Custom"/>
+                RoundedType="Custom" Margin="318,0,318,356"/>
 
             <themes:RoundedControl
                 x:Name="Evol_btn"
-                Text="Evolution" 
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top" 
-                Width="160"
+                Text="Evolution"
+                VerticalAlignment="Top"
+                SizeText="20"
                 Height="30"
                 BorderSize="2" 
                 CornerRadius="6" 
-                Margin="477,0,0,0"
+                Margin="0,0,159,0"
                 Grid.Row="1"
-                RoundedType="None"/>
+                RoundedType="None" HorizontalAlignment="Right" Width="160"
+                />
 
             <themes:RoundedControl
                 x:Name="Profil_btn"
                 Text="Profil"
-                HorizontalAlignment="Left"
-                OnClick="Profil_btn_Click"
+                SizeText="20"
+                HorizontalAlignment="Right"
                 Width="160" Height="30"
                 BorderSize="2"
                 CornerRadius="6"
-                Margin="636,0,0,356"
+                Margin="0,0,0,356"
                 RoundedType="Custom"
                 RoundedFlag="DownRight"
                 Grid.Row="1"/>
+
+
+            <themes:RoundedControl x:Name="btnQuit"
+                ColorBackOver="Red"
+                ColorBackActiv="{x:Null}"
+                ColorBorderDown="{x:Null}"
+                ColorBorderActiv="{x:Null}"
+                OnClick="btnQuit_OnClick"
+                BorderSize="2"
+                CornerRadius="15" 
+                Margin="0,0,5,0"
+                Height="50"
+                RoundedType="Right"
+                Text=""
+                IsOverOnPicture="False"                     
+                Image="{StaticResource ImgShut}"
+                SizeText="15"
+                IsClickalble="True"              
+                ZoomImage="0.8" VerticalAlignment="Center" HorizontalAlignment="Right" Width="50"
+                                     
+                />
+            <themes:RoundedControl x:Name="btnMin"
+                OnClick="btnMin_OnClick"
+                ColorBorderActiv="{x:Null}"
+                ColorBackActiv="{x:Null}"
+                ColorBackOver="{StaticResource AyoGrayC}"
+                BorderSize="2"
+                CornerRadius="15" 
+                Margin="692,0,0,0"
+                Height="50"
+                RoundedType="Left"
+                IsOverOnPicture="False"                     
+                Image="{StaticResource ImgMin}"
+                IsClickalble="True"
+                SizeText="15"
+                Text=""
+                ZoomImage="0.8" VerticalAlignment="Center" HorizontalAlignment="Left" Width="50"
+                />
 
         </Grid>
     </Border>

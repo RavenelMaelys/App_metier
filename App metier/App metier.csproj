@@ -8,7 +8,117 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Res\add.png" />
+    <None Remove="Res\down.png" />
+    <None Remove="Res\easy.jpg" />
+    <None Remove="Res\easy.png" />
+    <None Remove="Res\EasySave.png" />
+    <None Remove="Res\EasySave2.2.png" />
+    <None Remove="Res\EasySave2.ico" />
+    <None Remove="Res\EasySave2.png" />
+    <None Remove="Res\edit.png" />
+    <None Remove="Res\lock.png" />
+    <None Remove="Res\max.png" />
+    <None Remove="Res\min.png" />
+    <None Remove="Res\minus.png" />
+    <None Remove="Res\ok.png" />
+    <None Remove="Res\open.png" />
+    <None Remove="Res\pause.png" />
+    <None Remove="Res\play.png" />
+    <None Remove="Res\refresh.png" />
+    <None Remove="Res\run.png" />
+    <None Remove="Res\runAll.png" />
+    <None Remove="Res\save.png" />
+    <None Remove="Res\setting.png" />
+    <None Remove="Res\shut.png" />
+    <None Remove="Res\stop.png" />
+    <None Remove="Res\unlock.png" />
+    <None Remove="Res\up.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\GUIHelperLib\GUIHelperLib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Res\add.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\down.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\easy.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\easy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\EasySave.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\EasySave2.2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\EasySave2.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\EasySave2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\edit.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\lock.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\max.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\min.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\minus.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\ok.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\open.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\pause.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\play.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\refresh.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\run.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\runAll.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\save.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\setting.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\shut.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\stop.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\unlock.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\up.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

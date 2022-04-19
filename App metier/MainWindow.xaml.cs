@@ -25,26 +25,26 @@ namespace App_metier
             InitializeComponent();
         }
 
-        private void Missions_btn_Click(object sender, RoutedEventArgs e)
+
+
+
+        #region event from UI
+        private void btnQuit_OnClick(object sender, EventArgs e)
         {
-            /*Apréhender les projets
-             * Concevoir un plan de developpement
-             * le besoin du client
-             * Developpement
-             * Suivi du developememnt
-             * *evolution du besoin
-             * *gerer le developement (temps, imprévus)
-             * restitution du logiciel
-             * Support logiciel*/
+            Environment.Exit(Environment.ExitCode);
+            Application.Current.Shutdown();
         }
 
-        private void Profil_btn_Click(object sender, RoutedEventArgs e)
+        private void btnMax_OnClick(object sender, EventArgs e) =>
+            WindowState = (WindowState == WindowState.Normal) ? WindowState.Maximized : WindowState.Normal;
+
+        private void btnMin_OnClick(object sender, EventArgs e) => WindowState = WindowState.Minimized;
+
+        private void Header_OnDown(object sender, MouseEventArgs e)
         {
-            /*Maitrise de logiciels (Environnement de developement)
-             * 
-             *
-             *
-             */
+            this.DragMove();
         }
+
+        #endregion
     }
 }
