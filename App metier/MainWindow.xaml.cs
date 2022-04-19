@@ -25,42 +25,26 @@ namespace App_metier
             InitializeComponent();
         }
 
-        private void Missions_btn_Click(object sender, RoutedEventArgs e)
+
+
+
+        #region event from UI
+        private void btnQuit_OnClick(object sender, EventArgs e)
         {
-            var Missions = new Missions();
-            this.MainContent.Content = Missions;
+            Environment.Exit(Environment.ExitCode);
+            Application.Current.Shutdown();
         }
 
-        private void Profil_btn_Click(object sender, RoutedEventArgs e)
+        private void btnMax_OnClick(object sender, EventArgs e) =>
+            WindowState = (WindowState == WindowState.Normal) ? WindowState.Maximized : WindowState.Normal;
+
+        private void btnMin_OnClick(object sender, EventArgs e) => WindowState = WindowState.Minimized;
+
+        private void Header_OnDown(object sender, MouseEventArgs e)
         {
-            var Profile = new Profile();
-            this.MainContent.Content = Profile;
-            /*Maitrise de logiciels (Environnement de developement)
-             * Maitrise des languages (C#, C++, java, Python)
-             *Maitrise de l'anglais
-             *Communication skills
-             *Managment skills
-             */
+            this.DragMove();
         }
 
-        private void Carri_btn_Click(object sender, RoutedEventArgs e)
-        {
-            var Carriere = new Carrière();
-            this.MainContent.Content = Carriere;
-            /*Salaire : 30k-35 k = junior, 40k = millieu, Sr= 49k
-             * Evolution possible
-             */
-        }
-
-        private void Sect_btn_Click(object sender, RoutedEventArgs e)
-        {
-            var Secteurs = new Secteurs();
-            this.MainContent.Content = Secteurs;
-            /*
-             * 
-             * 
-             * 
-             */
-        }
+        #endregion
     }
 }

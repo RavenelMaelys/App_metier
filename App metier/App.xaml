@@ -4,6 +4,57 @@
              xmlns:local="clr-namespace:App_metier"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <SolidColorBrush x:Key="AyoDarkGray" Color="#191D1F"/>
+        <SolidColorBrush x:Key="AyoLightGray" Color="#B4A694"/>
+        <SolidColorBrush x:Key="AyoYellow" Color="#FCC000"/>
+        <SolidColorBrush x:Key="AyoOverGrey" Color="#4B575F"/>
+        <SolidColorBrush x:Key="AyoMiddleGrey" Color="#373A3D"/>
+
+        <Color x:Key="AyoDarkGrayC"  A="255" R="25" G="29" B="31"/>
+        <Color x:Key="AyoGrayC"  A="255" R="75" G="87" B="95"/>
+        <Color x:Key="AyoLightGrayC"  A="255" R="180" G="166" B="148"/>
+        <Color x:Key="AyoMiddleGrayC"  A="255" R="50" G="55" B="63"/>
+        <Color x:Key="AyoYellowC"  A="255" R="252" G="192" B="0"/>
+
+        <LinearGradientBrush x:Key="AyoYellowLinearGradint" StartPoint="0.5,0" EndPoint="0.5,1">
+            <GradientStop Offset="0.024">
+                <GradientStop.Color>
+                    <Color A="255" R="252" G="192" B="0"/>
+                </GradientStop.Color>
+            </GradientStop>
+            <GradientStop Offset="1">
+                <GradientStop.Color>
+                    <Color A="255" R="180" G="166" B="148"/>
+                </GradientStop.Color>
+            </GradientStop>
+            <GradientStop Color="{Binding AyoLightGrayC}"/>
+        </LinearGradientBrush>
+        <FontFamily x:Key="AyoFont">Segoe UI</FontFamily>
+
+
+        <ImageSource x:Key="ImgShut">/Res/shut.png</ImageSource>
+        <ImageSource x:Key="ImgMin">/Res/min.png</ImageSource>
+        <ImageSource x:Key="ImgMax">/Res/max.png</ImageSource>
+        <ImageSource x:Key="ImgAdd">/Res/add.png</ImageSource>
+        <ImageSource x:Key="ImgRemove">/Res/minus.png</ImageSource>
+        <ImageSource x:Key="ImgEdit">/Res/edit.png</ImageSource>
+        <ImageSource x:Key="ImgPlay">/Res/play.png</ImageSource>
+        <ImageSource x:Key="ImgStop">/Res/stop.png</ImageSource>
+        <ImageSource x:Key="ImgPause">/Res/pause.png</ImageSource>
+        <ImageSource x:Key="ImgRun">/Res/run.png</ImageSource>
+        <ImageSource x:Key="ImgEasySave">/Res/EasySave.png</ImageSource>
+        <ImageSource x:Key="ImgEasySave2">/Res/EasySave2.png</ImageSource>
+        <ImageSource x:Key="ImgEasy">/Res/easy.png</ImageSource>
+        <ImageSource x:Key="ImgSave">/Res/save.png</ImageSource>
+        <ImageSource x:Key="ImgRunAll">/Res/runAll.png</ImageSource>
+        <ImageSource x:Key="ImgOpen">/Res/open.png</ImageSource>
+        <ImageSource x:Key="ImgDown">/Res/down.png</ImageSource>
+        <ImageSource x:Key="ImgUp">/Res/up.png</ImageSource>
+        <ImageSource x:Key="ImgOk">/Res/ok.png</ImageSource>
+        <ImageSource x:Key="ImgLock">/Res/lock.png</ImageSource>
+        <ImageSource x:Key="ImgUnlock">/Res/unlock.png</ImageSource>
+        <ImageSource x:Key="ImgSetting">/Res/setting.png</ImageSource>
+        <ImageSource x:Key="ImgRefresh">/Res/refresh.png</ImageSource>
+
     </Application.Resources>
 </Application>
