@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:App_metier" xmlns:themes="clr-namespace:WPFUI.Themes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Background="Transparent" WindowStyle="None">
+        d:DataContext="{d:DesignInstance Type=local:App}" 
+        Title="MainWindow" Height="450" Width="800" Background="Transparent" WindowStyle="None" ResizeMode="NoResize">
     <Border Background="Transparent" CornerRadius="20" BorderThickness="2">
 
         <Border.Effect>
@@ -20,12 +21,15 @@
 
         <Grid Background="{StaticResource AyoDarkGray}">
             <Grid.RowDefinitions>
-                <RowDefinition Height="60"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="60" x:Uid="0"/>
+                <RowDefinition Height="30" x:Uid="1"/>
+                <RowDefinition Height="*" x:Uid="2"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
+
+            <!--panelHeader-->
 
             <!--panelHeader-->
             <themes:RoundedControl x:Name="Header"
@@ -58,7 +62,10 @@
                 BorderSize="2"
                 CornerRadius="6"
                 RoundedType="Custom"
-                RoundedFlag="DownLeft" Loaded="Missions_btn_Loaded"
+                RoundedFlag="DownLeft"
+                IsClickalble="True"
+                OnClick="btn_OnClick"
+                ActivAccentuation="2"
                 />
 
             <themes:RoundedControl
@@ -70,8 +77,14 @@
                 Height="30"
                 BorderSize="2" 
                 CornerRadius="6"
-                Margin="158,0,0,0"
-                RoundedType="None" HorizontalAlignment="Left" Width="160" Loaded="Sect_btn_Loaded"/>
+                Margin="160,0,0,0"
+                RoundedType="None"
+                HorizontalAlignment="Left"
+                Width="160"
+                IsClickalble="True"
+                OnClick="btn_OnClick"
+                ActivAccentuation="2"
+                />
 
             <themes:RoundedControl
                 x:Name="Formation_btn"
@@ -79,20 +92,30 @@
                 Text="Formation" 
                 SizeText="20"
                 BorderSize="2"
+                IsClickalble="True"
                 CornerRadius="6"
-                RoundedType="Custom" Margin="318,0,318,356" Loaded="Formation_btn_Loaded"/>
+                Height="30"
+                Width="160"
+                RoundedType="Custom" 
+                Margin="317,0,320,0"
+                OnClick="btn_OnClick"
+                ActivAccentuation="2"
+                />
 
             <themes:RoundedControl
                 x:Name="Evol_btn"
                 Text="Evolution"
-                VerticalAlignment="Top"
+                VerticalAlignment="Center"
                 SizeText="20"
                 Height="30"
                 BorderSize="2" 
                 CornerRadius="6" 
-                Margin="0,0,159,0"
+                Margin="0,0,160,0"
                 Grid.Row="1"
-                RoundedType="None" HorizontalAlignment="Right" Width="160" Loaded="Evol_btn_Loaded"
+                RoundedType="None"
+                IsClickalble="True"
+                OnClick="btn_OnClick" HorizontalAlignment="Right" Width="160"
+                ActivAccentuation="2"
                 />
 
             <themes:RoundedControl
@@ -103,10 +126,14 @@
                 Width="160" Height="30"
                 BorderSize="2"
                 CornerRadius="6"
-                Margin="0,0,0,356"
+                Margin="0,0,0,0"
                 RoundedType="Custom"
                 RoundedFlag="DownRight"
-                Grid.Row="1" Loaded="Profil_btn_Loaded"/>
+                Grid.Row="1"
+                IsClickalble="True"
+                OnClick="btn_OnClick"
+                ActivAccentuation="2"
+                />
 
 
             <themes:RoundedControl x:Name="btnQuit"
@@ -135,7 +162,7 @@
                 ColorBackOver="{StaticResource AyoGrayC}"
                 BorderSize="2"
                 CornerRadius="15" 
-                Margin="692,0,0,0"
+                Margin="0,0,103,0"
                 Height="50"
                 RoundedType="Left"
                 IsOverOnPicture="False"                     
@@ -143,10 +170,31 @@
                 IsClickalble="True"
                 SizeText="15"
                 Text=""
-                ZoomImage="0.8" VerticalAlignment="Center" HorizontalAlignment="Left" Width="50"
+                ZoomImage="0.8" VerticalAlignment="Center" HorizontalAlignment="Right" Width="50"
                 />
+            <themes:RoundedControl x:Name="btnMax"
+                OnClick="btnMin_OnClick"
+                ColorBorderActiv="{x:Null}"
+                ColorBackActiv="{x:Null}"
+                ColorBackOver="{StaticResource AyoGrayC}"
+                BorderSize="2"
+                CornerRadius="15" 
+                Margin="0,0,54,0"
+                Height="50"
+                RoundedType="None"
+                IsOverOnPicture="False"                     
+                Image="{StaticResource ImgMax}"
+                IsClickalble="True"
+                SizeText="15"
+                Text=""
+                ZoomImage="0.8" VerticalAlignment="Center" HorizontalAlignment="Right" Width="50"
+                />
+            
+            <local:Carrière HorizontalAlignment="Stretch" Grid.Row="2" VerticalAlignment="Stretch" Visibility="{Binding Visibility, ElementName=Evol_btn, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Width="796"/>
+            <!--<local:Missions HorizontalAlignment="Stretch" Grid.Row="2" VerticalAlignment="Stretch" Visibility="{Binding IsActiv, ElementName=Missions_btn, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Width="796"/>-->
+            <local:Profile HorizontalAlignment="Stretch" Grid.Row="2" VerticalAlignment="Stretch" Visibility="{Binding IsActiv, ElementName=Profil_btn, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Width="796"/>
+            <local:Secteurs Grid.Row="2" Visibility="{Binding IsActiv, ElementName=Sect_btn, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Margin="10,10,10,10"/>
 
         </Grid>
-        <!---->
     </Border>
 </Window>
