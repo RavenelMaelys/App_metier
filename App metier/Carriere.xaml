@@ -10,18 +10,21 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
-        <Image Margin="64,307,477,25" Source="{StaticResource ImgCarrier}"/>
-        <themes:RoundedControl Text="Carrière" BorderSize="5" SizeText="30" Margin="220,22,220,0" Height="64" VerticalAlignment="Top"/>
-        <StackPanel Orientation="Vertical" Grid.Column="0" Margin="10,117,477,179">
+        <Image Source="{StaticResource ImgCarrier}" Grid.Column="0" Grid.Row="2" Margin="55,29,55,29"/>
+        <themes:RoundedControl Text="Carrière" BorderSize="5" SizeText="30" Height="64" VerticalAlignment="Top" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0"/>
+        <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="1">
             <Label Content="Evolutions possible: " Foreground="{StaticResource AyoYellowLinearGradint}" FontSize="25"/>
             <RadioButton Content="Cadre" Foreground="{StaticResource AyoYellowLinearGradint}" FontSize="20" />
             <RadioButton Content="Chef de projet" Foreground="{StaticResource AyoYellowLinearGradint}" FontSize="20"/>
             <RadioButton Content="Expert technique" Foreground="{StaticResource AyoYellowLinearGradint}" FontSize="20"/>
         </StackPanel>
-        <Image Margin="330,117,44,25" Source="{StaticResource ImgGraph}"/>
+        <Image Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Source="{StaticResource ImgGraph}"/>
     </Grid>
 </UserControl>

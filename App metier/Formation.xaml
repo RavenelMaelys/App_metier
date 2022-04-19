@@ -9,11 +9,13 @@
     <Grid Height="339" VerticalAlignment="Center">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
-        <StackPanel Margin="381,154,19,77" >
+        <StackPanel >
 
             <CheckBox IsChecked="True">
                 <TextBlock Text="Formation bac +2 puis promotion a l'ancienneté dans l'entreprise"  Foreground="{StaticResource AyoYellowLinearGradint}" FontSize="15" Height="43" TextWrapping="Wrap" />
@@ -22,6 +24,6 @@
             <CheckBox Content="Sortie d'ecole d'ingénieur" IsChecked="True" Foreground="{StaticResource AyoYellowLinearGradint}" FontSize="15"/>
         </StackPanel>
         <Image Source="/Diplomes.png" Margin="13,96,516,33" />
-        <themes:RoundedControl Text="Formation" BorderSize="5" SizeText="30" Margin="220,12,220,0" Height="37" VerticalAlignment="Top"/>
+        <themes:RoundedControl Text="Formation" BorderSize="5" SizeText="30" Margin="220,12,220,0" Height="37" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
     </Grid>
 </UserControl>
