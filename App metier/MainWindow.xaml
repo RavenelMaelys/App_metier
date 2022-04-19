@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:App_metier" xmlns:themes="clr-namespace:WPFUI.Themes"
         mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance Type=local:App}" 
         Title="MainWindow" Height="450" Width="800" Background="Transparent" WindowStyle="None" ResizeMode="NoResize">
     <Border Background="Transparent" CornerRadius="20" BorderThickness="2">
 
@@ -27,6 +28,8 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
+
+            <!--panelHeader-->
 
             <!--panelHeader-->
             <themes:RoundedControl x:Name="Header"
@@ -186,6 +189,11 @@
                 Text=""
                 ZoomImage="0.8" VerticalAlignment="Center" HorizontalAlignment="Right" Width="50"
                 />
+            
+            <local:Carrière HorizontalAlignment="Stretch" Grid.Row="2" VerticalAlignment="Stretch" Visibility="{Binding Visibility, ElementName=Evol_btn, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Width="796"/>
+            <!--<local:Missions HorizontalAlignment="Stretch" Grid.Row="2" VerticalAlignment="Stretch" Visibility="{Binding IsActiv, ElementName=Missions_btn, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Width="796"/>-->
+            <local:Profile HorizontalAlignment="Stretch" Grid.Row="2" VerticalAlignment="Stretch" Visibility="{Binding IsActiv, ElementName=Profil_btn, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Width="796"/>
+            <local:Secteurs Grid.Row="2" Visibility="{Binding IsActiv, ElementName=Sect_btn, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Margin="10,10,10,10"/>
 
         </Grid>
     </Border>

@@ -28,6 +28,7 @@ namespace App_metier
 
         public MainWindow()
         {
+            DataContext = this;
             InitializeComponent();
 
             _btn.Add(Missions_btn);
